@@ -51,34 +51,6 @@ EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
               <Polled>true</Polled>
               <Units>none</Units>
         </Attribute>
-        <Attribute name="FramesIn" type="double">
-            <Documentation>Received packets.</Documentation>
-              <IsDbColumn>true</IsDbColumn>
-              <Baseline>false</Baseline>
-              <RollupExpression></RollupExpression>
-              <Minimum>false</Minimum>
-              <Maximum>false</Maximum>
-              <RollupStrategy>Sum</RollupStrategy>
-              <StandardDeviation>false</StandardDeviation>
-              <Variance>false</Variance>
-              <Percentile>0</Percentile>
-              <Polled>true</Polled>
-              <Units>Packets/s</Units>
-        </Attribute>
-        <Attribute name="BytesIn" type="double">
-            <Documentation>Received bytes.</Documentation>
-              <IsDbColumn>true</IsDbColumn>
-              <Baseline>false</Baseline>
-              <RollupExpression></RollupExpression>
-              <Minimum>false</Minimum>
-              <Maximum>false</Maximum>
-              <RollupStrategy>Sum</RollupStrategy>
-              <StandardDeviation>false</StandardDeviation>
-              <Variance>false</Variance>
-              <Percentile>0</Percentile>
-              <Polled>true</Polled>
-              <Units>B/s</Units>
-        </Attribute>
         <Attribute name="FramesOut" type="double">
             <Documentation>Transmitted packets.</Documentation>
               <IsDbColumn>true</IsDbColumn>
