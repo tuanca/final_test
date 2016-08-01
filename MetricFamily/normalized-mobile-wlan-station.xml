@@ -51,7 +51,7 @@ EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
               <Polled>true</Polled>
               <Units>none</Units>
         </Attribute>
-        <Attribute name="FramesOut" type="double">
+        <Attribute name="FramesOut2" type="double">
             <Documentation>Transmitted packets.</Documentation>
               <IsDbColumn>true</IsDbColumn>
               <Baseline>false</Baseline>
