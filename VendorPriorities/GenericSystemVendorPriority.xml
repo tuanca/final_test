@@ -11,7 +11,12 @@
             <VendorCertID>{http://im.ca.com/certifications/snmp}EmpireNtProcessMib</VendorCertID>
 			 <PriorityGroup>EmpireNtApacheProcess</PriorityGroup>
         </CertificationOrder>
-
+		<!--
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NetScalerCacheStatsMib</VendorCertID>
+        </CertificationOrder>
+		-->
         <CertificationOrder>
             <CollectionID translate="true">All Manageable Devices</CollectionID>
             <VendorCertID>{http://im.ca.com/certifications/snmp}LanmgrHostResourcesNtServerMib</VendorCertID>
@@ -24,6 +29,12 @@
             <CollectionID translate="true">All Manageable Devices</CollectionID>
             <VendorCertID>{http://im.ca.com/certifications/snmp}DellPE12gServerOSMemoryMib</VendorCertID>
 		</CertificationOrder>
+		<!--
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}F5BigIPServerMib</VendorCertID>
+        </CertificationOrder>
+		-->
         <!--CertificationOrder>
             <CollectionID translate="true">All Manageable Devices</CollectionID>
             <VendorCertID>{http://im.ca.com/certifications/snmp}HPCompaqMemoryCAMib</VendorCertID>
