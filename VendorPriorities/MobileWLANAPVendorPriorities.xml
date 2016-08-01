@@ -11,5 +11,20 @@
             <VendorCertID>{http://im.ca.com/certifications/snmp}ArubaWlanAPOverviewMib</VendorCertID>
             <PriorityGroup>ArubaWlan</PriorityGroup>
         </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}RuckusZDWLANAccessPointMib</VendorCertID>
+            <PriorityGroup>RuckusZDWLAN</PriorityGroup>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}RuckusZDWLANAccessPoinPerWlantMib</VendorCertID>
+            <PriorityGroup>RuckusZDWLAN</PriorityGroup>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}RuckusZDWLANRadioStatisticsMib</VendorCertID>
+            <PriorityGroup>RuckusZDWLAN</PriorityGroup>
+        </CertificationOrder>
     </CertificationOrderList>
 </MetricFamilyVendorPriority>

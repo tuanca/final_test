@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2016 CA.  All rights reserved.
+This software and all information contained therein is confidential and
+proprietary and shall not be duplicated, used, disclosed or disseminated in any
+way except as authorized by the applicable license agreement, without the
+express written permission of CA. All authorized reproductions must be marked
+with this language.
+
+EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+-->
+<DataModel namespace="http://im.ca.com/certifications/snmp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SNMPCertificationFacet.xsd">
+  <FacetType name="RuckusZDControllerMib" descriptorClass="com.ca.im.core.datamodel.certs.CertificationFacetDescriptorImpl">
+    <Documentation>Ruckus ZD Controller</Documentation>
+    <FacetOf namespace="http://im.ca.com/core" name="Item" />
+      <Protocol>SNMP</Protocol>
+      <MIB>AUTO-GENERATION-MIB-NAME</MIB>
+      <DisplayName>Ruckus ZD Controller</DisplayName>
+    <AttributeGroup name="RuckusZDControllerGroup" external="true">
+        <Attribute name="Index" type="ObjectID">
+          <IsKey>true</IsKey>
+          <IsIndex>true</IsIndex>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.30</Source>
+        </Attribute>
+        <Attribute name="ruckusZDSystemName" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusZDSystemIPAddr" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.2</Source>
+        </Attribute>
+        <Attribute name="ruckusZDSystemVersion" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.18</Source>
+        </Attribute>
+        <Attribute name="ruckusZDSystemMacAddr" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.3</Source>
+        </Attribute>
+        <Attribute name="ruckusZDSystemUptime" type="TimeTicks">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.8</Source>
+        </Attribute>
+        <Attribute name="ruckusZDSystemStatus" type="Int">
+          <IsKey>true</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.30</Source>
+        </Attribute>
+        <Attribute name="ruckusZDSystemPeerConnectedStatus" type="Int">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.1.1.1.1.31</Source>
+        </Attribute>
+    </AttributeGroup>
+    <Expressions>
+      <ExpressionGroup destCert="{http://im.ca.com/normalizer}NormalizedGenericSystemInfo" name="RuckusZDControllerDS">
+            <Expression destAttr="Indexes">Index</Expression>
+             <Expression destAttr="Names">ruckusZDSystemName</Expression>
+             <Expression destAttr="Descriptions">"IP  " + ruckusZDSystemIPAddr + ", MAC " + ruckusZDSystemMacAddr + ", Version " + ruckusZDSystemVersion</Expression>
+             <Expression destAttr="Availability">isdef(ruckusZDSystemUptime) ? 100 : 0</Expression>
+             <Expression destAttr="PctTimeInMasterState">ruckusZDSystemStatus == 1 ? 100 : 0</Expression>
+             <Expression destAttr="PctTimeInStandbyState">ruckusZDSystemStatus == 2 ? 100 : 0</Expression>
+             <Expression destAttr="PctTimeInNoRedundancyState">ruckusZDSystemStatus == 3 ? 100 : 0</Expression>
+             <Expression destAttr="PctTimePeerInConnectedState">ruckusZDSystemPeerConnectedStatus == 1 ? 100  : 0</Expression>
+             <Expression destAttr="PctTimePeerInDisconnectedState">ruckusZDSystemPeerConnectedStatus == 2 ? 100  : 0</Expression>
+             <Expression destAttr="TimeInMasterState">ruckusZDSystemStatus == 1 ? _rspDuration  : 0</Expression>
+             <Expression destAttr="TimeInStandbyState">ruckusZDSystemStatus == 2 ? _rspDuration  : 0</Expression>
+             <Expression destAttr="TimeInNoRedundancyState">ruckusZDSystemStatus == 3 ? _rspDuration  : 0</Expression>
+             <Expression destAttr="TimePeerInConnectedState">ruckusZDSystemPeerConnectedStatus == 1 ? _rspDuration  : 0</Expression>
+             <Expression destAttr="TimePeerInDisconnectedState">ruckusZDSystemPeerConnectedStatus == 2 ? _rspDuration  : 0</Expression>
+      </ExpressionGroup>
+    </Expressions>
+  </FacetType>
+</DataModel>

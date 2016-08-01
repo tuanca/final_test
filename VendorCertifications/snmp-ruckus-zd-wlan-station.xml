@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2016 CA.  All rights reserved.
+This software and all information contained therein is confidential and
+proprietary and shall not be duplicated, used, disclosed or disseminated in any
+way except as authorized by the applicable license agreement, without the
+express written permission of CA. All authorized reproductions must be marked
+with this language.
+
+EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+-->
+<DataModel namespace="http://im.ca.com/certifications/snmp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SNMPCertificationFacet.xsd">
+  <FacetType name="RuckusZDWLANStationMib" descriptorClass="com.ca.im.core.datamodel.certs.CertificationFacetDescriptorImpl">
+    <Documentation>Ruckus ZD WLAN Station</Documentation>
+    <FacetOf namespace="http://im.ca.com/core" name="Item" />
+      <Protocol>SNMP</Protocol>
+      <MIB>RUCKUS-ZD-WLAN-MIB</MIB>
+      <DisplayName>Ruckus ZD WLAN Station</DisplayName>
+    <IndexTagList>
+      <PrimaryTag>RuckusZDWLANStation</PrimaryTag>
+      <IndexTag>
+        <Name>ruckusZDAPConfig</Name>
+        <PrimaryKeyExpression>ruckusZDWLANStaAPMacAddr</PrimaryKeyExpression>
+        <ThisTagKeyExpression>ruckusZDAPConfigMacAddress</ThisTagKeyExpression>
+      </IndexTag>
+    </IndexTagList>
+    <AttributeGroup name="ruckusZDAPConfigGroup" list="true" external="true">
+        <UseIndex>ruckusZDAPConfig</UseIndex>
+        <Attribute name="ZDAP_Index" type="ObjectID">
+          <IsKey>true</IsKey>
+          <IsIndex>true</IsIndex>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.2</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigDeviceName" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.5</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigIpAddress" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.16</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigLocation" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.7</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigMacAddress" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.2</Source>
+        </Attribute>
+    </AttributeGroup>
+    <AttributeGroup name="RuckusZDWLANStationGroup" list="true" external="true">
+        <UseIndex>RuckusZDWLANStation</UseIndex>
+        <Attribute name="STA_Index" type="ObjectID">
+          <IsKey>true</IsKey>
+          <IsIndex>true</IsIndex>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.2</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaAPMacAddr" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.2</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaSSID" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.4</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaUser" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.5</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaIPAddr" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.8</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaChannel" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.7</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaRxPkts" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.10</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaRxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.11</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaTxPkts" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.12</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaTxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.13</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaRetries" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.14</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaAssocTime" type="TimeTicks">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.15</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaRxError" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.16</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaTxSuccess" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.17</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaRxDrop" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.22</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaTxDrop" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.23</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaTxError" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.24</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaSignalStrength" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.81</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaMacAddr" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaRadioType" type="Int">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.6</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANSta11bgReassoc" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.18</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaRetryBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.20</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaSNR" type="Int">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.21</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaVlanID" type="Int">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.30</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANStaAvgRSSI" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.3.1.1.9</Source>
+        </Attribute>
+    </AttributeGroup>
+    <Expressions>
+      <ExpressionGroup destCert="{http://im.ca.com/normalizer}NormalizedMobileWLANStationInfo" name="RuckusZDWLANStationDS">
+             <Filter>ruckusZDWLANStaAPMacAddr != null &amp;&amp; isdef(ruckusZDWLANStaSignalStrength)</Filter>
+             <Expression destAttr="Indexes">createIndexArray({STA_Index, ZDAP_Index})</Expression>
+             <Expression destAttr="Names">"LoggedIn User: " + ruckusZDWLANStaUser + ", IPaddress " + ruckusZDWLANStaIPAddr + ", SSID: " + ruckusZDWLANStaSSID + ", MAC " + ruckusZDWLANStaMacAddr.toString().toUpperCase() + ", APConfig Name: " + ruckusZDAPConfigDeviceName + ", APConfig IPaddress " + ruckusZDAPConfigIpAddress + ", APConfig Location: " + ruckusZDAPConfigLocation</Expression>
+             <Expression destAttr="Descriptions">"LoggedIn User: " + ruckusZDWLANStaUser + ", IPaddress " + ruckusZDWLANStaIPAddr + ", SSID: " + ruckusZDWLANStaSSID + ", MAC " + ruckusZDWLANStaMacAddr.toString().toUpperCase() + ", APConfig Name: " + ruckusZDAPConfigDeviceName + ", APConfig IPaddress " + ruckusZDAPConfigIpAddress + ", APConfig Location: " + ruckusZDAPConfigLocation</Expression>
+             <Expression destAttr="RadioChannel">ruckusZDWLANStaChannel</Expression>
+             <Expression destAttr="FramesIn">ruckusZDWLANStaRxPkts</Expression>
+             <Expression destAttr="BytesIn">ruckusZDWLANStaRxBytes</Expression>
+             <Expression destAttr="FramesOut">ruckusZDWLANStaTxPkts</Expression>
+             <Expression destAttr="BytesOut">ruckusZDWLANStaTxBytes</Expression>
+             <Expression destAttr="TransmittedRetries">ruckusZDWLANStaRetries</Expression>
+             <Expression destAttr="Availability">isdef(ruckusZDWLANStaAssocTime) ? 100 : 0</Expression>
+             <Expression destAttr="RxErrorPackets">ruckusZDWLANStaRxError</Expression>
+             <Expression destAttr="TxSuccessPackets">ruckusZDWLANStaTxSuccess</Expression>
+             <Expression destAttr="TxDropPackets">ruckusZDWLANStaRxDrop</Expression>
+             <Expression destAttr="RxDropPackets">ruckusZDWLANStaTxDrop</Expression>
+             <Expression destAttr="TxErrorPackets">ruckusZDWLANStaTxError</Expression>
+             <Expression destAttr="SignalStrength">ruckusZDWLANStaSignalStrength</Expression>
+             <Expression destAttr="RadioType">ruckusZDWLANStaRadioType</Expression>
+             <Expression destAttr="ReassociateOnRF">ruckusZDWLANSta11bgReassoc</Expression>
+             <Expression destAttr="TxRetryBytes">ruckusZDWLANStaRetryBytes</Expression>
+             <Expression destAttr="SignalNoiseRatio">ruckusZDWLANStaSNR</Expression>
+             <Expression destAttr="VLANStationID">ruckusZDWLANStaVlanID</Expression>
+             <Expression destAttr="AvgRSSI">ruckusZDWLANStaAvgRSSI</Expression>
+      </ExpressionGroup>
+    </Expressions>
+  </FacetType>
+</DataModel>
