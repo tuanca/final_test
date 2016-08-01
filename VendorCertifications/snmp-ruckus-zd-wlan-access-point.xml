@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2016 CA.  All rights reserved.
+This software and all information contained therein is confidential and
+proprietary and shall not be duplicated, used, disclosed or disseminated in any
+way except as authorized by the applicable license agreement, without the
+express written permission of CA. All authorized reproductions must be marked
+with this language.
+
+EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+-->
+<DataModel namespace="http://im.ca.com/certifications/snmp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SNMPCertificationFacet.xsd">
+  <FacetType name="RuckusZDWLANAccessPointMib" descriptorClass="com.ca.im.core.datamodel.certs.CertificationFacetDescriptorImpl">
+    <Documentation>Ruckus ZD WLAN Access Point</Documentation>
+    <FacetOf namespace="http://im.ca.com/core" name="Item" />
+      <Protocol>SNMP</Protocol>
+      <MIB>RUCKUS-ZD-WLAN-MIB</MIB>
+      <DisplayName>Ruckus ZD WLAN Access Point</DisplayName>
+    <IndexTagList>
+      <PrimaryTag>RuckusZDWLANAccessPoint</PrimaryTag>
+      <IndexTag>
+        <Name>RuckusZDWLANAccessPointConfig</Name>
+        <PrimaryKeyExpression>ruckusZDWLANAPMacAddr</PrimaryKeyExpression>
+        <ThisTagKeyExpression>ruckusZDAPConfigMacAddress</ThisTagKeyExpression>
+      </IndexTag>
+    </IndexTagList>
+    <AttributeGroup name="RuckusZDWLANAccessPointGroup" list="true" external="true">
+        <UseIndex>RuckusZDWLANAccessPoint</UseIndex>
+        <Attribute name="AP_Index" type="ObjectID">
+          <IsKey>false</IsKey>
+          <IsIndex>true</IsIndex>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPMacAddr" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPTotalUser" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.110</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPNumSta" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.15</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPStatus" type="Int">
+          <IsKey>true</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.3</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPUptime" type="TimeTicks">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.6</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPNumRadios" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.13</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPNumRogues" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.16</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXByte" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.21</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXPkt" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.22</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXPKTSucc" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.24</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsTXByte" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.25</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsTXPkt" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.26</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPMemUtil" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.27</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPMemTotal" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.28</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPCPUUtil" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.29</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXPKTBcast" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.47</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXPKTMcast" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.48</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXPKTUcast" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.49</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsTXPKTBcast" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.50</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsTXPKTMcast" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.51</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsTXPKTUcast" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.52</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsDropped" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.53</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPTxFrameDropped" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.57</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPTxFrameError" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.58</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPStaTxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.61</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPStaRxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.62</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXByteRate" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.111</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsTXByteRate" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.112</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPNumVAP" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.14</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPMeshHops" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.19</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPMeshUpPortCntUpdown" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.54</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPLANStatsRXPktErr" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.1.1.23</Source>
+        </Attribute>
+    </AttributeGroup>
+    <AttributeGroup name="RuckusZDWLANAccessPointConfigGroup" list="true" external="true">
+        <UseIndex>RuckusZDWLANAccessPointConfig</UseIndex>
+        <Attribute name="AP_Config_Index" type="ObjectID">
+          <IsKey>true</IsKey>
+          <IsIndex>true</IsIndex>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.2</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigDeviceName" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.5</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigLocation" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.7</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigAPModel" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.4</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigIpAddress" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.16</Source>
+        </Attribute>
+        <Attribute name="ruckusZDAPConfigMacAddress" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.4.1.1.1.1.2</Source>
+        </Attribute>
+    </AttributeGroup>
+    <Expressions>
+      <ExpressionGroup destCert="{http://im.ca.com/normalizer}NormalizedMobileWLANAPInfo" name="RuckusZDWLANAccessPointDS">
+             <Expression destAttr="Indexes">createIndexArray({AP_Index,AP_Config_Index})</Expression>
+             <Expression destAttr="Names">"AP " + ruckusZDAPConfigDeviceName + ", Model " + ruckusZDAPConfigAPModel + ", Location: " + ruckusZDAPConfigLocation + ", IPaddress " + ruckusZDAPConfigIpAddress + ", MAC " + ruckusZDAPConfigMacAddress.toString().toUpperCase()</Expression>
+             <Expression destAttr="Descriptions">"Ruckus WLAN AP " + ruckusZDAPConfigDeviceName + ", Model " + ruckusZDAPConfigAPModel + ", Location: " + ruckusZDAPConfigLocation + ", IPaddress " + ruckusZDAPConfigIpAddress + ", MAC " + ruckusZDAPConfigMacAddress</Expression>
+             <Expression destAttr="NumberUsers">ruckusZDWLANAPTotalUser</Expression>
+             <Expression destAttr="NumberAuthenticatedTerminal">ruckusZDWLANAPNumSta</Expression>
+             <Expression destAttr="TimeInDisconnectedState">ruckusZDWLANAPStatus == 0 ? _rspDuration : 0</Expression>
+             <Expression destAttr="TimeInConnectedState">ruckusZDWLANAPStatus == 1 ? _rspDuration : 0</Expression>
+             <Expression destAttr="TimeInApprovalPendingState">ruckusZDWLANAPStatus == 2 ? _rspDuration : 0</Expression>
+             <Expression destAttr="TimeInUpgradingFirmwareState">ruckusZDWLANAPStatus == 3 ? _rspDuration : 0</Expression>
+             <Expression destAttr="TimeInProvisioningState">ruckusZDWLANAPStatus == 4 ? _rspDuration : 0</Expression>
+             <Expression destAttr="PctTimeInDisconnectedState">ruckusZDWLANAPStatus == 0 ? 100 : 0</Expression>
+             <Expression destAttr="PctTimeInConnectedState">ruckusZDWLANAPStatus == 1 ? 100 : 0</Expression>
+             <Expression destAttr="PctTimeInApprovalPendingState">ruckusZDWLANAPStatus == 2 ? 100 : 0</Expression>
+             <Expression destAttr="PctTimeInUpgradingFirmwareState">ruckusZDWLANAPStatus == 3 ? 100 : 0</Expression>
+             <Expression destAttr="PctTimeInProvisioningState">ruckusZDWLANAPStatus == 4 ? 100 : 0</Expression>
+             <Expression destAttr="StatusCode">ruckusZDWLANAPStatus</Expression>
+             <Expression destAttr="Availability">isdef(ruckusZDWLANAPUptime) ? 100 : 0</Expression>
+             <Expression destAttr="NumRadios">ruckusZDWLANAPNumRadios</Expression>
+             <Expression destAttr="NumRogues">ruckusZDWLANAPNumRogues</Expression>
+             <Expression destAttr="BytesIn">ruckusZDWLANAPLANStatsRXByte</Expression>
+             <Expression destAttr="FramesIn">ruckusZDWLANAPLANStatsRXPkt</Expression>
+             <Expression destAttr="RxSuccessPackets">ruckusZDWLANAPLANStatsRXPKTSucc</Expression>
+             <Expression destAttr="BytesOut">ruckusZDWLANAPLANStatsTXByte</Expression>
+             <Expression destAttr="FramesOut">ruckusZDWLANAPLANStatsTXPkt</Expression>
+             <Expression destAttr="MemoryUtilization">ruckusZDWLANAPMemUtil</Expression>
+             <Expression destAttr="MemoryTotal">ruckusZDWLANAPMemTotal</Expression>
+             <Expression destAttr="CPUUtilization">ruckusZDWLANAPCPUUtil</Expression>
+             <Expression destAttr="RxSuccessBcast">ruckusZDWLANAPLANStatsRXPKTBcast</Expression>
+             <Expression destAttr="RxSuccessMcast">ruckusZDWLANAPLANStatsRXPKTMcast</Expression>
+             <Expression destAttr="RxSuccessUcast">ruckusZDWLANAPLANStatsRXPKTUcast</Expression>
+             <Expression destAttr="TxSuccessBcast">ruckusZDWLANAPLANStatsTXPKTBcast</Expression>
+             <Expression destAttr="TxSuccessMcast">ruckusZDWLANAPLANStatsTXPKTMcast</Expression>
+             <Expression destAttr="TxSuccessUcast">ruckusZDWLANAPLANStatsTXPKTUcast</Expression>
+             <Expression destAttr="PacketsDropped">ruckusZDWLANAPLANStatsDropped</Expression>
+             <Expression destAttr="PacketsOutDropped">ruckusZDWLANAPTxFrameDropped</Expression>
+             <Expression destAttr="ErrorOut">ruckusZDWLANAPTxFrameError</Expression>
+             <Expression destAttr="DataReceiveFromClient">ruckusZDWLANAPStaTxBytes</Expression>
+             <Expression destAttr="DataSendToClient">ruckusZDWLANAPStaRxBytes</Expression>
+             <Expression destAttr="BandwidthIn">ruckusZDWLANAPLANStatsRXByteRate * 8.0</Expression>
+             <Expression destAttr="BandwidthOut">ruckusZDWLANAPLANStatsTXByteRate * 8.0</Expression>
+             <Expression destAttr="NumAccessPoint">ruckusZDWLANAPNumVAP</Expression>
+             <Expression destAttr="NumMeshHops">ruckusZDWLANAPMeshHops</Expression>
+             <Expression destAttr="NumMeshUpPortCountUpdown">ruckusZDWLANAPMeshUpPortCntUpdown</Expression>
+             <Expression destAttr="RxErrorPackets">ruckusZDWLANAPLANStatsRXPktErr</Expression>
+      </ExpressionGroup>
+    </Expressions>
+  </FacetType>
+</DataModel>

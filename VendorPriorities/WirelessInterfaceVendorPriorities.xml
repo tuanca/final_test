@@ -105,6 +105,20 @@
             <VendorCertID>{http://im.ca.com/certifications/snmp}NortelMSCPPDpnGateUtpFramerPortMib</VendorCertID>
 			<PriorityGroup>NortelMSCPPPort</PriorityGroup>
 			</CertificationOrder>
-		
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+             <VendorCertID>{http://im.ca.com/certifications/snmp}RuckusZDWLANRogueMib</VendorCertID>
+            <PriorityGroup>RuckusZDWLAN</PriorityGroup>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}RuckusWLANMib</VendorCertID>
+            <PriorityGroup>RuckusZDWLAN</PriorityGroup>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}RuckusRadioStatisticsMib</VendorCertID>
+            <PriorityGroup>RuckusZDWLAN</PriorityGroup>
+        </CertificationOrder>		
     </CertificationOrderList>
 </MetricFamilyVendorPriority>

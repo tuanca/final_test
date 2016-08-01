@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2016 CA.  All rights reserved.
+This software and all information contained therein is confidential and
+proprietary and shall not be duplicated, used, disclosed or disseminated in any
+way except as authorized by the applicable license agreement, without the
+express written permission of CA. All authorized reproductions must be marked
+with this language.
+
+EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+-->
+<DataModel namespace="http://im.ca.com/certifications/snmp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SNMPCertificationFacet.xsd">
+  <FacetType name="RuckusWLANMib" descriptorClass="com.ca.im.core.datamodel.certs.CertificationFacetDescriptorImpl">
+    <Documentation>Ruckus WLAN</Documentation>
+    <FacetOf namespace="http://im.ca.com/core" name="Item" />
+      <Protocol>SNMP</Protocol>
+      <MIB>RUCKUS-WLAN-MIB</MIB>
+      <DisplayName>Ruckus WLAN</DisplayName>
+    <AttributeGroup name="RuckusWLANGroup" external="true">
+        <Attribute name="Index" type="ObjectID">
+          <IsKey>true</IsKey>
+          <IsIndex>true</IsIndex>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsSSID" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsBSSID" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.2</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsRxFrames" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.32</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsTxFrames" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.42</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsRxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.24</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsTxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.39</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsRxErrors" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.31</Source>
+        </Attribute>
+        <Attribute name="ruckusWLANStatsTxErrors" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.1.6.1.1.1.4.1.41</Source>
+        </Attribute>
+    </AttributeGroup>
+    <Expressions>
+      <ExpressionGroup destCert="{http://im.ca.com/normalizer}NormalizedWirelessInterfaceInfo" name="RuckusWLANDS">
+            <Expression destAttr="Indexes">Index</Expression>
+             <Expression destAttr="Names">"WLAN " + ruckusWLANStatsSSID + " - " + ruckusWLANStatsBSSID</Expression>
+             <Expression destAttr="Descriptions">"WLAN " + ruckusWLANStatsSSID + " - " + ruckusWLANStatsBSSID</Expression>
+             <Expression destAttr="Frames">ruckusWLANStatsRxFrames + ruckusWLANStatsTxFrames</Expression>
+             <Expression destAttr="FramesIn">ruckusWLANStatsRxFrames</Expression>
+             <Expression destAttr="Bytes">ruckusWLANStatsRxBytes + ruckusWLANStatsTxBytes</Expression>
+             <Expression destAttr="BytesIn">ruckusWLANStatsRxBytes</Expression>
+             <Expression destAttr="BytesOut">ruckusWLANStatsTxBytes</Expression>
+             <Expression destAttr="Bits">(ruckusWLANStatsRxBytes + ruckusWLANStatsTxBytes) * 8</Expression>
+             <Expression destAttr="BitsIn">ruckusWLANStatsRxBytes * 8</Expression>
+             <Expression destAttr="BitsOut">ruckusWLANStatsTxBytes * 8</Expression>
+             <Expression destAttr="Errors">ruckusWLANStatsRxErrors + ruckusWLANStatsTxErrors</Expression>
+             <Expression destAttr="ErrorsIn">ruckusWLANStatsRxErrors</Expression>
+      </ExpressionGroup>
+    </Expressions>
+  </FacetType>
+</DataModel>

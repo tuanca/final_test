@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2016 CA.  All rights reserved.
+This software and all information contained therein is confidential and
+proprietary and shall not be duplicated, used, disclosed or disseminated in any
+way except as authorized by the applicable license agreement, without the
+express written permission of CA. All authorized reproductions must be marked
+with this language.
+
+EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+-->
+<DataModel namespace="http://im.ca.com/certifications/snmp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="SNMPCertificationFacet.xsd">
+  <FacetType name="RuckusZDWLANRadioStatisticsMib" descriptorClass="com.ca.im.core.datamodel.certs.CertificationFacetDescriptorImpl">
+    <Documentation>Ruckus ZD WLAN Radio Statistics</Documentation>
+    <FacetOf namespace="http://im.ca.com/core" name="Item" />
+      <Protocol>SNMP</Protocol>
+      <MIB>AUTO-GENERATION-MIB-NAME</MIB>
+      <DisplayName>Ruckus ZD WLAN Radio Statistics</DisplayName>
+    <AttributeGroup name="RuckusZDWLANRadioStatisticsGroup" external="true">
+        <Attribute name="Index" type="ObjectID">
+          <IsKey>true</IsKey>
+          <IsIndex>true</IsIndex>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsAPMacAddr" type="OctetString">
+          <IsKey>true</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.1</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsRadioIndex" type="OctetString">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.2</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsRxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.11</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsTxBytes" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.14</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsRxPkts" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.10</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsTxPkts" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>true</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.13</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsNumVAP" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.7</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsNumSta" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.8</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsAvgStaRSSI" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.9</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsMaxSta" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.19</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsRadioType" type="Int">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.3</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsChannel" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.4</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsTxPower" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.5</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsAntennaGain" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.44</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsBeaconPeriod" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.45</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsFrameErrorRate" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.20</Source>
+        </Attribute>
+        <Attribute name="ruckusZDWLANAPRadioStatsFrameRetryRate" type="Long">
+          <IsKey>false</IsKey>
+          <NeedsDelta>false</NeedsDelta>
+          <Source>1.3.6.1.4.1.25053.1.2.2.1.1.2.2.1.21</Source>
+        </Attribute>
+    </AttributeGroup>
+    <Expressions>
+      <ExpressionGroup destCert="{http://im.ca.com/normalizer}NormalizedMobileWLANAPInfo" name="RuckusZDWLANRadioStatisticsDS">
+            <Expression destAttr="Indexes">Index</Expression>
+             <Expression destAttr="Names">"Radio ID " + ruckusZDWLANAPRadioStatsRadioIndex + ", AP MAC " + ruckusZDWLANAPRadioStatsAPMacAddr</Expression>
+             <Expression destAttr="Descriptions">"Ruckus WLAN Radio ID " + ruckusZDWLANAPRadioStatsRadioIndex + ", AP MAC " + ruckusZDWLANAPRadioStatsAPMacAddr</Expression>
+             <Expression destAttr="BytesIn">ruckusZDWLANAPRadioStatsRxBytes</Expression>
+             <Expression destAttr="BytesOut">ruckusZDWLANAPRadioStatsTxBytes</Expression>
+             <Expression destAttr="FramesIn">ruckusZDWLANAPRadioStatsRxPkts</Expression>
+             <Expression destAttr="FramesOut">ruckusZDWLANAPRadioStatsTxPkts</Expression>
+             <Expression destAttr="NumAccessPoint">ruckusZDWLANAPRadioStatsNumVAP</Expression>
+             <Expression destAttr="NumStation">ruckusZDWLANAPRadioStatsNumSta</Expression>
+             <Expression destAttr="AvgRSSI">ruckusZDWLANAPRadioStatsAvgStaRSSI</Expression>
+             <Expression destAttr="MaxStation">ruckusZDWLANAPRadioStatsMaxSta</Expression>
+             <Expression destAttr="RadioType">ruckusZDWLANAPRadioStatsRadioType</Expression>
+             <Expression destAttr="RadioChannel">ruckusZDWLANAPRadioStatsChannel</Expression>
+             <Expression destAttr="TxPower">ruckusZDWLANAPRadioStatsTxPower</Expression>
+             <Expression destAttr="AntennaGain">ruckusZDWLANAPRadioStatsAntennaGain</Expression>
+             <Expression destAttr="BeaconPeriod">ruckusZDWLANAPRadioStatsBeaconPeriod</Expression>
+             <Expression destAttr="FrameErrorRate">ruckusZDWLANAPRadioStatsFrameErrorRate</Expression>
+             <Expression destAttr="FrameRetryRate">ruckusZDWLANAPRadioStatsFrameRetryRate</Expression>
+      </ExpressionGroup>
+    </Expressions>
+  </FacetType>
+</DataModel>
