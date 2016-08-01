@@ -81,5 +81,9 @@
             <CollectionID translate="true">All Manageable Devices</CollectionID>
             <VendorCertID>{http://im.ca.com/certifications/snmp}FreeMemory</VendorCertID>
 		</CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+             <VendorCertID>{http://im.ca.com/certifications/snmp}RuckusZDControllerMib</VendorCertID>
+        </CertificationOrder>
     </CertificationOrderList>
 </MetricFamilyVendorPriority>
