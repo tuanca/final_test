@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+
+        Copyright (c) 2012 - 2014 CA.  All rights reserved.
+
+        This software and all information contained therein is confidential and
+        proprietary and shall not be duplicated, used, disclosed or disseminated in any
+        way except as authorized by the applicable license agreement, without the
+        express written permission of CA. All authorized reproductions must be marked
+        with this language.
+
+        EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+        EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+        WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+        IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+        PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+        THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+        USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+        BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+        EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+
+-->
+<SupportedMetricFamilies>
+    <MetricFamilyDef ctdName="CtdSoftwareComponent" ciType="11.99" name="NormalizedWirelessInterfaceInfo">
+        <PolledMetrics>
+            <PolledMetricDef ciMetricId="1" type="double" units="ms" name="DLCI">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="2" type="double" units="Packets/s" name="FramesIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="3" type="double" units="B/s" name="BytesIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="4" type="double" units="Packets/s" name="NonunicastIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="5" type="double" units="Packets/s" name="Nonunicast">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="6" type="double" units="Packets/s" name="FragmentsTransmitted">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="7" type="double" units="Count/s" name="MaxedOutOnTransmitAttempts">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="8" type="double" units="Count/s" name="SuccessfulRetries">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="9" type="double" units="Packets/s" name="DuplicateFramesReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="10" type="double" units="Packets/s" name="ErrorsIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="11" type="double" units="count" name="ActiveWirelessClients">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="12" type="double" units="Packets/s" name="CTSReceivedFromRTS">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="13" type="double" units="Packets/s" name="Frames">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="14" type="double" units="B/s" name="Bytes">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="15" type="double" units="Packets/s" name="Errors">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="16" type="double" units="Packets/s" name="CTSNotReceivedFromRTS">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="17" type="double" units="Packets/s" name="ExpectedACKSNotReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="18" type="double" units="Packets/s" name="ReceivedFragments">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="19" type="double" units="Packets/s" name="FCSErrors">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="20" type="double" units="Packets/s" name="UndecryptableFrames">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="21" type="double" units="B/s" name="BytesOut">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="22" type="double" units="pct" name="BandwidthUtilizationIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="23" type="double" units="pct" name="BandwidthUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="24" type="double" units="pct" name="BandwidthUtilizationOut">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="25" type="double" units="Packets/s" name="FramesOut">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="26" type="double" units="Packets/s" name="NonunicastOut">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="27" type="double" units="bit/s" name="BitsIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="28" type="double" units="bit/s" name="Bits">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="29" type="double" units="bit/s" name="BitsOut">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="30" type="double" units="pct" name="PctErrors">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="31" type="double" units="count" name="CurrentNumberConnectedUsers">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="32" type="double" units="unit" name="PacketServiceType">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="33" type="double" units="B" name="BytesTransmitted">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="34" type="double" units="count" name="GprsUmtsEcIo">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="35" type="double" units="Celsius" name="TemperatureCelsius">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="36" type="double" units="count" name="GprsUmtsRssi">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="37" type="double" units="B" name="BytesReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="38" type="double" units="none" name="StationRole">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="39" type="double" units="none" name="MicAlgorithm">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="40" type="double" units="none" name="WEPPermuteAlgorithm">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="41" type="double" units="none" name="WorldMode">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="42" type="double" units="none" name="ScanParentEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="43" type="double" units="none" name="IsPSPFEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="44" type="double" units="none" name="IsMultipleBssidEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="45" type="double" units="none" name="IsMobileStationListIgnore">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="46" type="double" units="none" name="IsExtensionsEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="47" type="double" units="none" name="IsAllowBroadcastSsidAssociation">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="48" type="double" units="bit/s" name="PrivacyOptionMaxRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="49" type="double" units="none" name="EthernetEncapsulationType">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="50" type="double" units="none" name="BridgeSpacing">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="51" type="double" units="count" name="MaximumNumOfAssociatedStations">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="52" type="double" units="count" name="SsidLength">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="53" type="double" units="none" name="IsVoipExtensionsEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="54" type="double" units="none" name="IsBroadcastSSid">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="55" type="double" units="none" name="AID">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="56" type="double" units="none" name="CarrierSet">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="57" type="double" units="none" name="ModulationType">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="58" type="double" units="none" name="PreambleType">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="59" type="double" units="none" name="DomainCapabilitySet">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="60" type="double" units="none" name="MacStandardApplied">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="61" type="double" units="B" name="PacketConcatenationSize">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="62" type="double" units="bit/s" name="BitRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="63" type="double" units="none" name="IsPrivacyEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="64" type="double" units="none" name="ChannelNum">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="65" type="double" units="none" name="IsChannelSelectionEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="66" type="double" units="none" name="FrequencyBand">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="67" type="double" units="none" name="FrequencyUnits">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="68" type="double" units="none" name="StartChannelNumber">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="69" type="double" units="none" name="EndChannelNumber">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="70" type="double" units="none" name="ChannelSpacingNumber">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="71" type="double" units="none" name="StartChannelFrequency">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="72" type="double" units="none" name="FrequencySpacing">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="73" type="double" units="none" name="ChannelSwitchTime">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="74" type="double" units="none" name="PowerLevel">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="75" type="double" units="none" name="Power">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="76" type="double" units="none" name="NumOfPowerLevels">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="77" type="double" units="none" name="CurrentPowerLevel">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="78" type="double" units="none" name="PowerUnit">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="79" type="double" units="none" name="SNR">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="80" type="double" units="none" name="Contention">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="81" type="double" units="none" name="MaximumCompatibleRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="82" type="double" units="none" name="IsChannelAutoEnable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="83" type="double" units="none" name="CurrentChannel">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="84" type="double" units="count" name="CountSuccessfulLocReportsWithin50Meters">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="85" type="double" units="count" name="CountSuccessfulLocReportsBetween50And150Meters">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="86" type="double" units="pct" name="PctSuccessLocReportsWithin50Meters">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="87" type="double" units="pct" name="PctSuccessLocReportsBetween50And150Meters">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="88" type="double" units="count" name="SLsRequestsReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="89" type="double" units="count" name="SLsValidRequestsReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="90" type="double" units="count" name="SLsServedRequests">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="91" type="double" units="pct" name="PctSLsServedRequests">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="92" type="double" units="count" name="SLgRequestsReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="93" type="double" units="count" name="SLgValidRequestsReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="94" type="double" units="count" name="SLgServedRequests">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="95" type="double" units="pct" name="PctSLgServedRequests">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="96" type="double" units="count" name="CountTransactionsUsingGPSMethod">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="97" type="double" units="count" name="CountSUPLTransactionsUsingRRLPWithMSBMethod">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="98" type="double" units="count" name="CountSUPLTransactionsUsingLPPWithMSBMethod">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="99" type="double" units="count" name="CountSUPLTransactionsUsingRRLPWithMSAMethod">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="100" type="double" units="count" name="CountSUPLTransactionsUsingLPPWithMSAMethod">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="101" type="double" units="count" name="CountSUPLTransactionsUsingLPPWithMSAAndOTDOAMethod">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="102" type="double" units="B/s" name="DiscardsIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="103" type="double" units="count" name="ActiveBridges">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="104" type="double" units="count" name="ActiveRepeaters">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="105" type="double" units="count" name="StationsAssctdSncReStrtd">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="106" type="double" units="count" name="StationsAuthenSncReStrtd">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="107" type="double" units="count" name="UnknownProtocolPkts">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="108" type="double" units="count" name="StationsRoamedInSncReStrtd">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="109" type="double" units="count" name="StationsRoamedAwySncReStrtd">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="110" type="double" units="count" name="StationsDeAuthenSncReStrtd">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="111" type="double" units="count" name="StationsDisAssctedSncReStrtd">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="112" type="double" units="B" name="TotalBytes">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="113" type="double" units="count" name="TotalFramesDiscarded">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="114" type="double" units="count" name="DiscardedFrames">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="115" type="double" units="pct" name="PctDiscardsIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="116" type="double" units="pct" name="PctErrorsIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="117" type="double" units="B" name="AverageFrameSizeIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="118" type="double" units="B" name="AverageFrameSize">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="119" type="double" units="B/s" name="UnicastIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="120" type="double" units="B/s" name="Unicast">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+        </PolledMetrics>
+        <NonPolledMetrics>
+            <NonPolledMetricDef type="ObjectID" name="Indexes"/>
+            <NonPolledMetricDef type="String" name="Names">
+                <CtdMap attrName="InstanceName"/>
+            </NonPolledMetricDef>
+            <NonPolledMetricDef type="String" name="Descriptions">
+                <CtdMap attrName="Description"/>
+            </NonPolledMetricDef>
+            <NonPolledMetricDef type="String" name="SLsStatsDurationStartTime"/>
+            <NonPolledMetricDef type="String" name="SLsStatsDurationEndTime"/>
+            <NonPolledMetricDef type="String" name="SLgStatsDurationStartTime"/>
+            <NonPolledMetricDef type="String" name="SLgStatsDurationEndTime"/>
+            <NonPolledMetricDef type="String" name="GsmHistoryRssiPerSecond"/>
+            <NonPolledMetricDef type="String" name="GsmHistoryRssiPerMinute"/>
+            <NonPolledMetricDef type="String" name="GsmHistoryRssiPerHour"/>
+            <NonPolledMetricDef type="String" name="WorldModeCountry"/>
+            <NonPolledMetricDef type="String" name="MobileStationChannels"/>
+            <NonPolledMetricDef type="String" name="Ssid"/>
+            <NonPolledMetricDef type="String" name="ClientStation"/>
+            <NonPolledMetricDef type="String" name="BasicRateSet"/>
+            <NonPolledMetricDef type="String" name="FrequencyBandType"/>
+        </NonPolledMetrics>
+    </MetricFamilyDef>
+</SupportedMetricFamilies>

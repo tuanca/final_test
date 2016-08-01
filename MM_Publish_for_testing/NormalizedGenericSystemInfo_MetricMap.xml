@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+
+        Copyright (c) 2012 - 2014 CA.  All rights reserved.
+
+        This software and all information contained therein is confidential and
+        proprietary and shall not be duplicated, used, disclosed or disseminated in any
+        way except as authorized by the applicable license agreement, without the
+        express written permission of CA. All authorized reproductions must be marked
+        with this language.
+
+        EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+        EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+        WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+        IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+        PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+        THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+        USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+        BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+        EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+
+-->
+<SupportedMetricFamilies>
+    <MetricFamilyDef ctdName="CtdSoftwareComponent" ciType="11.214" name="GenericSystem">
+        <PolledMetrics>
+            <PolledMetricDef ciMetricId="1" type="double" units="Count/s" name="PagesPagedIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="2" type="double" units="Count/s" name="PagesPagedOut">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="3" type="double" units="Count/s" name="PagesSwappedIn">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="4" type="double" units="Count/s" name="PagesSwappedOut">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="5" type="double" units="Count/s" name="FileCacheHits">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="6" type="double" units="Count/s" name="FileCacheMisses">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="7" type="double" units="B" name="TotalPhysicalMemory">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="8" type="double" units="B" name="PhysicalMemoryUsed">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="9" type="double" units="Count/s" name="PageFaults">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="10" type="double" units="pct" name="AverageCPUUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="11" type="double" units="pct" name="CPUImbalance">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="12" type="double" units="count" name="ActiveConnections">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="13" type="double" units="Count/s" name="DroppedConnections">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="14" type="double" units="B" name="TotalVirtualMemory">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="15" type="double" units="B" name="VirtualMemoryUsed">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="16" type="double" units="count" name="SmallCommBuffersDropped">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="17" type="double" units="count" name="TotalLargeCommBuffers">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="18" type="double" units="count" name="LargeCommBuffersUsed">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="19" type="double" units="count" name="Processes">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="20" type="double" units="Packets" name="TotalErrors">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="21" type="double" units="Packets" name="TotalFramesDiscarded">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="22" type="double" units="Packets" name="TotalIncomingPkts">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="23" type="double" units="B/s" name="TotalIncomingBytes">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="24" type="double" units="Packets" name="TotalOutgoingPkts">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="25" type="double" units="B/s" name="TotalOutgoingBytes">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="26" type="double" units="count" name="iSCSIOperations">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="27" type="double" units="B" name="iSCSIBytesRead">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="28" type="double" units="B" name="iSCSIBytesWritten">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="29" type="double" units="count" name="NFSOperations">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="30" type="double" units="count" name="CIFSOperations">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="31" type="double" units="s" name="OffsettoGPSReferenceTimeSeconds">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="32" type="double" units="none" name="AverageCarriertoNoiseRatiodB">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="33" type="double" units="pct" name="PercentPhysicalMemoryFree">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="34" type="double" units="pct" name="PercentVirtualMemoryFree">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="35" type="double" units="count" name="TotalConnections">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="36" type="double" units="count" name="CPULoadAverage">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="37" type="double" units="Count/s" name="NumberofInterruptsProcessed">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="38" type="double" units="count" name="NumberofContextSwitches">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="39" type="double" units="count" name="NumberofBlocksSent">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="40" type="double" units="count" name="NumberofBlocksReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="41" type="double" units="count" name="TotalSwapMemory">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="42" type="double" units="B" name="SwapMemoryUsed">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="43" type="double" units="count" name="RPCCallsReceived">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="44" type="double" units="count" name="Numberoffreefiledescriptors">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="45" type="double" units="count" name="MemoryTotal">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="46" type="double" units="B" name="MemoryUsed">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="47" type="double" units="pct" name="MemoryUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="48" type="double" units="pct" name="SwapSpaceUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="49" type="double" units="pct" name="PhysicalMemoryUtilizationWithoutBufferAndCache">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="50" type="double" units="Count/s" name="FileCacheAttempts">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="51" type="double" units="pct" name="FileCacheMissRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="52" type="double" units="pct" name="PhysicalMemoryUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="53" type="double" units="pct" name="VirtualMemoryUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="54" type="double" units="Packets/s" name="Frames">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="55" type="double" units="B/s" name="TotalBytes">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="56" type="double" units="B" name="PhysicalMemoryFree">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="57" type="double" units="s" name="Unavailability">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="58" type="double" units="count" name="TotalCommErrors">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="59" type="double" units="B" name="MemoryAvailable">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="60" type="double" units="pct" name="SwapMemoryUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="61" type="double" units="State" name="OperatingSystemStatus">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="62" type="double" units="none" name="PrimaryOperatingSystem">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="63" type="double" units="B" name="TotalPagingMemory">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="64" type="double" units="B" name="PagingMemoryFree">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="65" type="double" units="B" name="VirtualMemoryFree">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="66" type="double" units="KB" name="ProcessSize">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="67" type="double" units="count" name="Threads">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="68" type="double" units="pct" name="CPUUtilization">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="69" type="double" units="count" name="SystemCalls">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="70" type="double" units="Count/s" name="PageScanRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="71" type="double" units="count" name="Swaps">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="72" type="double" units="count" name="SoftPageFaults">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="73" type="double" units="pct" name="PctHardPageFaults">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="74" type="double" units="count" name="HardPageFaults">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="76" type="double" units="pct" name="ProcessingLoad">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="77" type="double" units="Count/s" name="TotalBitOutRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="78" type="double" units="Count/s" name="TotalPacketsOutRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="79" type="double" units="Count/s" name="TotalBitInRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="80" type="double" units="Count/s" name="TotalPacketsInRate">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="81" type="double" units="count" name="MessagesSent">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+            <PolledMetricDef ciMetricId="82" type="double" units="count" name="MessagesRecvd">
+                <PublishData>false</PublishData>
+                <PublishAlarms>false</PublishAlarms>
+            </PolledMetricDef>
+        </PolledMetrics>
+        <NonPolledMetrics>
+            <NonPolledMetricDef type="ObjectID[]" name="Indexes"/>
+            <NonPolledMetricDef type="String" name="Names">
+                <CtdMap attrName="InstanceName"/>
+            </NonPolledMetricDef>
+            <NonPolledMetricDef type="String" name="Descriptions">
+                <CtdMap attrName="Description"/>
+            </NonPolledMetricDef>
+            <NonPolledMetricDef type="String" name="OperatingSystemName"/>
+            <NonPolledMetricDef type="String" name="OperatingSystemVersion"/>
+        </NonPolledMetrics>
+    </MetricFamilyDef>
+</SupportedMetricFamilies>

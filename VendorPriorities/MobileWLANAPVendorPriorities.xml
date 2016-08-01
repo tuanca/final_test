@@ -1,0 +1,15 @@
+<MetricFamilyVendorPriority version="0.0.0">
+    <MetricFamilyID>{http://im.ca.com/normalizer}NormalizedMobileWLANAPInfo</MetricFamilyID>
+    <CertificationOrderList>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}ArubaWlanAPMib</VendorCertID>
+            <PriorityGroup>ArubaWlan</PriorityGroup>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}ArubaWlanAPOverviewMib</VendorCertID>
+            <PriorityGroup>ArubaWlan</PriorityGroup>
+        </CertificationOrder>
+    </CertificationOrderList>
+</MetricFamilyVendorPriority>

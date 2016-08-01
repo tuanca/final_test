@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MetricFamilyVendorPriority version="0.0.0">
+    <MetricFamilyID>{http://im.ca.com/normalizer}NormalizedGenericSystemInfo</MetricFamilyID>
+    <CertificationOrderList>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CaNtProcessMib</VendorCertID>
+		</CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}EmpireNtProcessMib</VendorCertID>
+			 <PriorityGroup>EmpireNtApacheProcess</PriorityGroup>
+        </CertificationOrder>
+		<!--
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NetScalerCacheStatsMib</VendorCertID>
+        </CertificationOrder>
+		-->
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}LanmgrHostResourcesNtServerMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}DellPE12gServerOperatingSystemMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}DellPE12gServerOSMemoryMib</VendorCertID>
+		</CertificationOrder>
+		<!--
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}F5BigIPServerMib</VendorCertID>
+        </CertificationOrder>
+		-->
+        <!--CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}HPCompaqMemoryCAMib</VendorCertID>
+        </CertificationOrder-->
+		<!--
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}VmwareServerMib</VendorCertID>
+        </CertificationOrder>
+		-->
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}RiverbedLanwanDataMib</VendorCertID>
+        </CertificationOrder>
+		<!-- <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}UCDSNMPMIB</VendorCertID>
+        </CertificationOrder> -->
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CaiAppSvcProcOracleV4.3Mib</VendorCertID>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}EmpireLinuxServerHrSysUpTimeMib</VendorCertID>
+			<PriorityGroup>EmpireNtApacheProcess</PriorityGroup>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}EmpireNtServer4Mib</VendorCertID>
+			   <PriorityGroup>EmpireNtApacheProcess</PriorityGroup>
+        </CertificationOrder>		
+		<!--CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CompaqSeServerWithmemMib</VendorCertID>
+		</CertificationOrder-->			
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}EmpireAppSvcProcSystemMIB</VendorCertID>
+			 <PriorityGroup>EmpireNtApacheProcess</PriorityGroup>
+		</CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}EmpireMib2Mib</VendorCertID>
+		</CertificationOrder>			
+     		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CaUnixProcessMib</VendorCertID>
+		</CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoEntityQfpUtilizationMib</VendorCertID>
+		</CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}FreeMemory</VendorCertID>
+		</CertificationOrder>
+    </CertificationOrderList>
+</MetricFamilyVendorPriority>

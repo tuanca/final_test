@@ -1,0 +1,110 @@
+<MetricFamilyVendorPriority version="0.0.0">
+    <MetricFamilyID>{http://im.ca.com/normalizer}NormalizedWirelessInterfaceInfo</MetricFamilyID>
+    <CertificationOrderList>
+	<!-- This is being commented due to the defect DE40053
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoIEEE802dot11AssociationMib</VendorCertID>
+        </CertificationOrder>
+	-->
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_PrivacyTableMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_ConfigurationMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_DsssMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_SensitivityMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_NativePowerMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_PowerSupportMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_FrequencyMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_RadioChannelMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_PhysicalCharacteristicsMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_SsidInfoMib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_AssignedAidMib</VendorCertID>
+        </CertificationOrder>
+        <!-- <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoDot11If_BssMib</VendorCertID>
+        </CertificationOrder> -->
+		 <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoIEEE802dot11Mib</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoGsmUmtsModule</VendorCertID>
+        </CertificationOrder>
+        <CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}CiscoAirespaceWirelessInterfaceMib</VendorCertID>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NsnLbsE911LocStatsMib</VendorCertID>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NsnLbsE911TransactionStatsMib</VendorCertID>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NsnLbsE911SLsInterfaceStatsMib</VendorCertID>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NsnLbsE911SLgInterfaceStatsMib</VendorCertID>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}JuniperM30BkplnLiteMib</VendorCertID>
+        </CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NortelPPDpnGateUtpFramerPortMib</VendorCertID>
+			</CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NortelMSCPPTrkUnackedFramerPortMib</VendorCertID>
+			<PriorityGroup>NortelMSCPPPort</PriorityGroup>
+			</CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NortelPPTrkUnackedFramerPortMib</VendorCertID>
+			</CertificationOrder>
+		<CertificationOrder>
+            <CollectionID translate="true">All Manageable Devices</CollectionID>
+            <VendorCertID>{http://im.ca.com/certifications/snmp}NortelMSCPPDpnGateUtpFramerPortMib</VendorCertID>
+			<PriorityGroup>NortelMSCPPPort</PriorityGroup>
+			</CertificationOrder>
+		
+    </CertificationOrderList>
+</MetricFamilyVendorPriority>

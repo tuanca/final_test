@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel namespace="http://im.ca.com/normalizer"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="IMDBCertificationFacet.xsd">
+
+    <FacetType name="NormalizedGenericSystemInfo"
+               descriptorClass="com.ca.im.core.datamodel.certs.NormalizedFacetDescriptorImpl">
+        <Documentation>Defines the identification information, configuration
+            information, and polled
+            metrics for Generic System
+        </Documentation>
+        <FacetOf namespace="http://im.ca.com/core" name="Item"/>
+
+        <DisplayName>Generic System</DisplayName>
+        <Protocol>IMDB</Protocol>
+        <TableName>NRM_GENERIC_SYSTEM</TableName>
+        <Normalized>true</Normalized>
+        <ComponentFacets>
+            <Facet>{http://im.ca.com/inventory}GenericSystem</Facet>
+        </ComponentFacets>
+
+        <Attribute name="ProcessingLoad" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>pct</Units>
+        </Attribute>
+        <Attribute name="TotalBitOutRate" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Sum</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>Count/s</Units>
+        </Attribute>
+        <Attribute name="TotalPacketsOutRate" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Sum</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>Count/s</Units>
+        </Attribute>
+        <Attribute name="TotalBitInRate" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Sum</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>Count/s</Units>
+        </Attribute>
+        <Attribute name="TotalPacketsInRate" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Sum</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>Count/s</Units>
+        </Attribute>
+        <Attribute name="MessagesSent" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>count</Units>
+        </Attribute>
+        <Attribute name="MessagesRecvd" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>count</Units>
+        </Attribute>
+        <Attribute name="Swaps" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>count</Units>
+        </Attribute>
+        <Attribute name="SoftPageFaults" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>count</Units>
+        </Attribute>
+        <Attribute name="PctHardPageFaults" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>pct</Units>
+        </Attribute>
+        <Attribute name="HardPageFaults" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression></RollupExpression>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>count</Units>
+        </Attribute>
+        <Attribute name="SourceFacetTypes" type="QName" cached="true" persistent="true" list="true"/>
+        <AttributeGroup name="GenericSystemGroup" list="true" external="true">
+            <Attribute name="Indexes" type="ObjectID[]"/>
+            <Attribute name="Names" type="String"/>
+            <Attribute name="Descriptions" type="String"/>
+            <Attribute name="PagesPagedIn" type="double">
+                <Documentation>Pages Paged In</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+            <Attribute name="PagesPagedOut" type="double">
+                <Documentation>Pages Paged Out</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+            <Attribute name="PagesSwappedIn" type="double">
+                <Documentation>Pages Swapped In</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>B</Units>
+            </Attribute>
+            <Attribute name="PagesSwappedOut" type="double">
+                <Documentation>Pages Swapped Out</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>B</Units>
+            </Attribute>
+            <Attribute name="FileCacheHits" type="double">
+                <Documentation>File Cache Hits</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+             <Attribute name="FileCacheMisses" type="double">
+                <Documentation>File Cache Misses</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+            <Attribute name="TotalPhysicalMemory" type="double">
+                <Documentation>Total Physical Memory</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="PhysicalMemoryUsed" type="double">
+                <Documentation>Physical Memory Used</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="PageFaults" type="double">
+                <Documentation>Page Faults</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+            <Attribute name="AverageCPUUtilization" type="double">
+                <Documentation>Average CPU Utilization</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="DroppedConnections" type="double">
+                <Documentation>Dropped Connections</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+            <Attribute name="TotalVirtualMemory" type="double">
+                <Documentation>Total Virtual Memory</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="VirtualMemoryUsed" type="double">
+                <Documentation>Virtual Memory Used</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Bytes</Units>
+            </Attribute>
+            <Attribute name="TotalIncomingBytes" type="double">
+                <Documentation>Total Incoming Bytes</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="TotalOutgoingBytes" type="double">
+                <Documentation>Total Outgoing Bytes</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="CPULoadAverage" type="double">
+                <Documentation>CPU Load Average</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+            <Attribute name="NumberofInterruptsProcessed" type="double">
+                <Documentation>Number of Interrupts Processed</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+
+            <!-- POLARIS TECH ATTRIBUTES THAT MAP TO EHEALTH COLUMN EXPRESSIONS BEGIN -->
+
+            <!-- The corresponding vendor cert expressions for the attributes below
+                 have been commented out. Please uncomment and fix them in the vendor
+                 certification to populate these attributes with data -->
+
+            <Attribute name="FileCacheAttempts" type="double">
+                <Documentation>File Cache Attempts</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+            <Attribute name="FileCacheMissRate" type="double">
+                <Documentation>File Cache Miss Rate</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="PhysicalMemoryUtilization" type="double">
+                <Documentation>Physical Memory Utilization</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="VirtualMemoryUtilization" type="double">
+                <Documentation>Virtual Memory Utilization</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="TotalBytes" type="double">
+                <Documentation>Total Bytes</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B/s</Units>
+            </Attribute>
+            <Attribute name="PhysicalMemoryFree" type="double">
+                <Documentation>Physical Memory Free</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="MemoryAvailable" type="double">
+                <Documentation>Memory Available</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Bytes</Units>
+            </Attribute>
+            <Attribute name="OperatingSystemStatus" type="double">
+                <Documentation>Status of the operating system</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>State</Units>
+            </Attribute>
+            <Attribute name="PrimaryOperatingSystem" type="double">
+                <Documentation>if the operating system is primary or not</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units></Units>
+            </Attribute>
+            <Attribute name="OperatingSystemName" type="String">
+                <Documentation>operating system name</Documentation>
+            </Attribute>
+            <Attribute name="OperatingSystemVersion" type="String">
+                <Documentation>operating system version</Documentation>
+            </Attribute>
+            <Attribute name="TotalPagingMemory" type="double">
+                <Documentation>Total page file memory</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>B</Units>
+            </Attribute>
+            <Attribute name="PagingMemoryFree" type="double">
+                <Documentation>page file memory free</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>B</Units>
+            </Attribute>
+            <Attribute name="VirtualMemoryFree" type="double">
+                <Documentation>Virtual memory free</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>B</Units>
+            </Attribute>
+			<Attribute name="ProcessSize" type="double">
+                <Documentation>The combined size of the text, data and stack segments in KBytes.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>KB</Units>
+            </Attribute>
+			<Attribute name="Threads" type="double">
+                <Documentation>The number of threads executing within this process.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+			<Attribute name="SystemCalls" type="double">
+                <Documentation>System Calls</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+				<Units>count</Units>
+            </Attribute>
+			
+			<Attribute name="PageScanRate" type="double" external="true">
+				<Documentation>Page Scan Rate</Documentation>
+				<IsDbColumn>true</IsDbColumn>
+				<Baseline>false</Baseline>
+				<RollupExpression></RollupExpression>
+				<Minimum>false</Minimum>
+				<Maximum>false</Maximum>
+				<RollupStrategy>Sum</RollupStrategy>
+				<StandardDeviation>false</StandardDeviation>
+				<Variance>false</Variance>
+				<Percentile>0</Percentile>
+				<Polled>true</Polled>
+				<Units>Count/s</Units>
+			</Attribute>
+        </AttributeGroup>
+
+        <Expressions>
+            <ExpressionGroup name="DeviceComponent"
+                             destCert="{http://im.ca.com/inventory}DeviceComponent">
+                <Expression destAttr="IndexList">Indexes</Expression>
+            </ExpressionGroup>
+            <ExpressionGroup name="Item" destCert="{http://im.ca.com/core}Item">
+                <Expression destAttr="Name">Names</Expression>
+                <Expression destAttr="Description">Descriptions</Expression>
+            </ExpressionGroup>
+        </Expressions>
+
+    </FacetType>
+
+</DataModel>
+

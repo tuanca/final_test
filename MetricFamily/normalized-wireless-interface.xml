@@ -1,0 +1,1748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataModel namespace="http://im.ca.com/normalizer"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="IMDBCertificationFacet.xsd">
+
+    <FacetType name="NormalizedWirelessInterfaceInfo"
+               descriptorClass="com.ca.im.core.datamodel.certs.NormalizedFacetDescriptorImpl">
+        <Documentation>Wireless Interface</Documentation>
+        <FacetOf namespace="http://im.ca.com/core" name="Item"/>
+
+        <DisplayName>Wireless Interface</DisplayName>
+        <Protocol>IMDB</Protocol>
+        <TableName>NRM_WIRELESS_INTERFACE</TableName>
+        <Normalized>true</Normalized>
+
+        <ComponentFacets>
+            <Facet>{http://im.ca.com/inventory}WirelessInterface</Facet>
+        </ComponentFacets>
+
+        <Attribute name="CurrentNumberConnectedUsers" type="double">
+            <Documentation>Custom Approved Metric</Documentation>
+            <IsDbColumn>true</IsDbColumn>
+            <RollupExpression/>
+            <Baseline>false</Baseline>
+            <Minimum>false</Minimum>
+            <Maximum>false</Maximum>
+            <RollupStrategy>Avg</RollupStrategy>
+            <StandardDeviation>false</StandardDeviation>
+            <Variance>false</Variance>
+            <Percentile>0</Percentile>
+            <Polled>true</Polled>
+            <Units>count</Units>
+        </Attribute>
+        <Attribute name="SourceFacetTypes" type="QName" cached="true" persistent="true" list="true"/>
+        <AttributeGroup name="WirelessLANInterface" list="true" external="true">
+            <Attribute name="Indexes" type="ObjectID[]"/>
+            <Attribute name="Names" type="String"/>
+            <Attribute name="Descriptions" type="String"/>
+            <Attribute name="GsmHistoryRssiPerSecond" type="String"/>
+            <Attribute name="GsmHistoryRssiPerMinute" type="String"/>
+            <Attribute name="GsmHistoryRssiPerHour" type="String"/>
+            <Attribute name="BytesIn" type="double">
+                <Documentation>Number of bytes received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B/s</Units>
+            </Attribute>
+            <Attribute name="NonunicastIn" type="double">
+                <Documentation>The number of nonunicast frames (packets) received by the interface.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="Nonunicast" type="double">
+                <Documentation>The number of nonunicast frames (packets) sent or received by the interface.
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="FragmentsTransmitted" type="double">
+                <Documentation>Number of transmitted fragments.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="MaxedOutOnTransmitAttempts" type="double">
+                <Documentation>Maxed Out On Transmit Attempts</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="SuccessfulRetries" type="double">
+                <Documentation>Number of successfully transmitted MDUs after one or more retransmissions..
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="DuplicateFramesReceived" type="double">
+                <Documentation>Number of duplicate Frames received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="ActiveWirelessClients" type="double">
+                <Documentation>Number of active clients.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="CTSReceivedFromRTS" type="double">
+                <Documentation>Number of CTS received in response to an RTS.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="Bytes" type="double">
+                <Documentation>Number of bytes sent and received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B/s</Units>
+            </Attribute>
+            <Attribute name="CTSNotReceivedFromRTS" type="double">
+                <Documentation>Number of CTS Not received in response to an RTS.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="ExpectedACKSNotReceived" type="double">
+                <Documentation>Number of expected ACKS Not Received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="ReceivedFragments" type="double">
+                <Documentation>Number of received fragments.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="FCSErrors" type="double">
+                <Documentation>Number of packets with FCS errors.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="UndecryptableFrames" type="double">
+                <Documentation>Number of undecryptable frames (packets).</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="BytesOut" type="double">
+                <Documentation>Number of bytes send.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B/s</Units>
+            </Attribute>
+            <Attribute name="BandwidthUtilizationIn" type="double">
+                <Documentation>Percentage of incoming bandwidth utilization.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>pct</Units>
+            </Attribute>
+            <Attribute name="BandwidthUtilization" type="double">
+                <Documentation>Percentage of bandwidth utilization.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>pct</Units>
+            </Attribute>
+            <Attribute name="BandwidthUtilizationOut" type="double">
+                <Documentation>Percentage of outgoing bandwidth utilization.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>pct</Units>
+            </Attribute>
+            <Attribute name="NonunicastOut" type="double">
+                <Documentation>The number of nonunicast frames (packets) send by the interface.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="BitsIn" type="double">
+                <Documentation>Number of bits received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Bits/s</Units>
+            </Attribute>
+            <Attribute name="Bits" type="double">
+                <Documentation>Number of bits sent and received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Bits/s</Units>
+            </Attribute>
+            <Attribute name="BitsOut" type="double">
+                <Documentation>Number of bits send.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Bits</Units>
+            </Attribute>
+            <Attribute name="PacketServiceType" type="double">
+                <Documentation>Packet Service Type.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>unit</Units>
+            </Attribute>
+            <Attribute name="BytesTransmitted" type="double">
+                <Documentation>Total number of bytes transmitted for call.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="GprsUmtsEcIo" type="double">
+                <Documentation>The GPRS/UMTS Ec/Io value</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="TemperatureCelsius" type="double">
+                <Documentation>Modem Temperature.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Celsius</Units>
+            </Attribute>
+            <Attribute name="GprsUmtsRssi" type="double">
+                <Documentation>The GPRS/UMTS RSSI value.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="BytesReceived" type="double">
+                <Documentation>Total number of bytes recieved</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="StationRole" type="double">
+                <Documentation>Role of the station within the BSS of which it is a member.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="MicAlgorithm" type="double">
+                <Documentation>Mic Algorithm(micNone(1), micMXX(2), micMichael(3))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="WEPPermuteAlgorithm" type="double">
+                <Documentation>WEPPermuteAlgorithm(wepPermuteNone(1), wepPermuteIV(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="WorldMode" type="double">
+                <Documentation>function of the radio to allow it to function in countries other than it was manufactured
+                    for. none(1) - No world mode setting, legacy(2) - compatible with legacy hardware, dot11d(3)
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="WorldModeCountry" type="String">
+                <Documentation>Identifies the country in which the radio is operating.</Documentation>
+            </Attribute>
+            <Attribute name="ScanParentEnable" type="double">
+                <Documentation>enables the radio to scan for a better parent. (true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="IsPSPFEnable" type="double">
+                <Documentation>Is PSPF Enable(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="IsMultipleBssidEnable" type="double">
+                <Documentation>Is Multiple Bssid Enable(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="IsMobileStationListIgnore" type="double">
+                <Documentation>Is Mobile Station List Ignore(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="MobileStationChannels" type="String">
+                <Documentation>channels to be used by the infractructure clients for scanning purposes.</Documentation>
+            </Attribute>
+            <Attribute name="IsExtensionsEnable" type="double">
+                <Documentation>Is Extensions Enable(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="IsAllowBroadcastSsidAssociation" type="double">
+                <Documentation>Is Allow Broadcast Ssid Association(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="PrivacyOptionMaxRate" type="double">
+                <Documentation>maximum transmit bit rate supported by the radio</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>bit/s</Units>
+            </Attribute>
+            <Attribute name="EthernetEncapsulationType" type="double">
+                <Documentation>specifies the Ethernet encapsulation</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="BridgeSpacing" type="double">
+                <Documentation>Bridge Spacing in kilometer</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="MaximumNumOfAssociatedStations" type="double">
+                <Documentation>maximum number of stations which may associate with this radio interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="SsidLength" type="double">
+                <Documentation>maximum number of SSIDs allowed for a radio interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="IsVoipExtensionsEnable" type="double">
+                <Documentation>Is Voip Extensions Enable(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="Ssid" type="String">
+                <Documentation>SSID recognized by the radio interface</Documentation>
+            </Attribute>
+            <Attribute name="IsBroadcastSSid" type="double">
+                <Documentation>indicates if an auxiliary SSID is the Broadcast SSID.(true(1) or false(2))
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="AID" type="double">
+                <Documentation>AID for a client station to the radio interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="ClientStation" type="String">
+                <Documentation>defines the client station MAC address</Documentation>
+            </Attribute>
+            <Attribute name="CarrierSet" type="double">
+                <Documentation>defines the carrier set of the radio.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="ModulationType" type="double">
+                <Documentation>specifies the RF modulation type of the radio.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="PreambleType" type="double">
+                <Documentation>current radio preamble type</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="DomainCapabilitySet" type="double">
+                <Documentation>specifies the current multi-domain capability setting of this radio</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="BasicRateSet" type="String">
+                <Documentation>Basic Rate for the radio interface</Documentation>
+            </Attribute>
+            <Attribute name="MacStandardApplied" type="double">
+                <Documentation>specifies which IEEE 802.11 Standard applies to this radio interface.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="PacketConcatenationSize" type="double">
+                <Documentation>maximum packet concatenation size in bytes</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="BitRate" type="double">
+                <Documentation>defines the receiving or transmission bit rates</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>bit/s</Units>
+            </Attribute>
+            <Attribute name="IsPrivacyEnable" type="double">
+                <Documentation>(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="ChannelNum" type="double">
+                <Documentation>channel number which is a candidate for low-occupancy scanning.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="IsChannelSelectionEnable" type="double">
+                <Documentation>(true(1) or false(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="FrequencyBand" type="double">
+                <Documentation>radio frequency bands supported on the radio.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="FrequencyUnits" type="double">
+                <Documentation>base frequency units</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="StartChannelNumber" type="double">
+                <Documentation>first channel supported in this radio frequency band.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="EndChannelNumber" type="double">
+                <Documentation>last channel supported in this radio frequency band.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="ChannelSpacingNumber" type="double">
+                <Documentation>Numeric spacing between the identifiers of two adjacent supported channels in this
+                    band.
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="StartChannelFrequency" type="double">
+                <Documentation>base channel frequency</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="FrequencySpacing" type="double">
+                <Documentation>frequency separation between two adjacent radio frequency channels.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="FrequencyBandType" type="String">
+                <Documentation>radio frequency band name</Documentation>
+            </Attribute>
+            <Attribute name="ChannelSwitchTime" type="double">
+                <Documentation>maximum time required for the radio interface to switch its transceiver from one channel
+                    to any other supported channel
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="PowerLevel" type="double">
+                <Documentation>Power Level</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="Power" type="double">
+                <Documentation>transmit power available at a radio frequency band</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="NumOfPowerLevels" type="double">
+                <Documentation>The number of power levels available for the clients.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="CurrentPowerLevel" type="double">
+                <Documentation>The currently selected power level for client</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="PowerUnit" type="double">
+                <Documentation>native transmit power units implemented on the radio.(mW(1), dBm(2))</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="SNR" type="double">
+                <Documentation>The minimum SNR requirement for each data rate supported by a radio interface
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="Contention" type="double">
+                <Documentation>The average contention sensitivity level</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="MaximumCompatibleRate" type="double">
+                <Documentation>the of maximum data rate at which the station may transmit data.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="IsChannelAutoEnable" type="double">
+                <Documentation>true(1) or false(2)</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units></Units>
+            </Attribute>
+            <Attribute name="CurrentChannel" type="double">
+                <Documentation>The current operating frequency channel</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+            </Attribute>
+            <Attribute name="CountSuccessfulLocReportsWithin50Meters" type="double">
+                <Documentation>the number of successful location reports with accuracy within 50 meters</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="CountSuccessfulLocReportsBetween50And150Meters" type="double">
+                <Documentation>the number of successful location reports with accuracy between 50 and 150 meters
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="PctSuccessLocReportsWithin50Meters" type="double">
+                <Documentation>the success rate of location requests with accuracy within 50 meters</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="PctSuccessLocReportsBetween50And150Meters" type="double">
+                <Documentation>the success rate of location requests with accuracy between 50 and 150 meters
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="SLsRequestsReceived" type="double">
+                <Documentation>total number of requests received over SLs interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="SLsValidRequestsReceived" type="double">
+                <Documentation>number of valid requests received over SLs interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="SLsServedRequests" type="double">
+                <Documentation>number of successfully served location requests over SLs interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="PctSLsServedRequests" type="double">
+                <Documentation>success rate of location requests over SLs interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="SLsStatsDurationStartTime" type="String">
+                <Documentation>start time of statistics duration over SLs interface</Documentation>
+            </Attribute>
+            <Attribute name="SLsStatsDurationEndTime" type="String">
+                <Documentation>end time of statistics duration over SLs interface</Documentation>
+            </Attribute>
+            <Attribute name="SLgRequestsReceived" type="double">
+                <Documentation>total number of requests received over SLg interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="SLgValidRequestsReceived" type="double">
+                <Documentation>number of valid requests received over SLg interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="SLgServedRequests" type="double">
+                <Documentation>number of successfully served location requests over SLg interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="PctSLgServedRequests" type="double">
+                <Documentation>success rate of location requests over SLg interface</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Percent</Units>
+            </Attribute>
+            <Attribute name="SLgStatsDurationStartTime" type="String">
+                <Documentation>start time of statistics duration over SLg interface</Documentation>
+            </Attribute>
+            <Attribute name="SLgStatsDurationEndTime" type="String">
+                <Documentation>end time of statistics duration over SLg interface</Documentation>
+            </Attribute>
+            <Attribute name="CountTransactionsUsingGPSMethod" type="double">
+                <Documentation>number of transactions which use autonomous GPS method over ULP and LPP layer
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="CountSUPLTransactionsUsingRRLPWithMSBMethod" type="double">
+                <Documentation>number of SUPL transactions by using RRLP protocol with MSB A-GNSS method</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="CountSUPLTransactionsUsingLPPWithMSBMethod" type="double">
+                <Documentation>number of SUPL transactions by using LPP protocol with MSB A-GNSS method</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="CountSUPLTransactionsUsingRRLPWithMSAMethod" type="double">
+                <Documentation>number of SUPL transactions which use RRLP protocol with MSA A-GNSS method
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="CountSUPLTransactionsUsingLPPWithMSAMethod" type="double">
+                <Documentation>number of SUPL transactions which use LPP protocol with MSA A-GNSS method</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="CountSUPLTransactionsUsingLPPWithMSAAndOTDOAMethod" type="double">
+                <Documentation>number of SUPL transactions which use LPP protocol. Both OTDOA and MSA A-GNSS methods are
+                    supported by capabilities
+                </Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="AverageFrameSize" type="double">
+                <Documentation>AverageFrameSize</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="StationsDisAssctedSncReStrtd" type="double">
+                <Documentation>StationsDisAssctedSncReStrtd</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="PctErrors" type="double">
+                <Documentation>Percentage of errors.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>true</Minimum>
+                <Maximum>true</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>pct</Units>
+            </Attribute>
+            <Attribute name="Unicast" type="double">
+                <Documentation>Unicast</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="PctErrorsIn" type="double">
+                <Documentation>PctErrorsIn</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>pct</Units>
+            </Attribute>
+            <Attribute name="PctDiscardsIn" type="double">
+                <Documentation>PctDiscardsIn</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>pct</Units>
+            </Attribute>
+            <Attribute name="ErrorsIn" type="double">
+                <Documentation>Number of packets with errors received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="StationsRoamedInSncReStrtd" type="double">
+                <Documentation>StationsRoamedInSncReStrtd</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="UnicastIn" type="double">
+                <Documentation>UnicastIn</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="StationsAssctdSncReStrtd" type="double">
+                <Documentation>StationsAssctdSncReStrtd</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="Frames" type="double">
+                <Documentation>Number of frames (packets).</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="Errors" type="double">
+                <Documentation>Number of packets with errors.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="ActiveRepeaters" type="double">
+                <Documentation>ActiveRepeaters</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="TotalBytes" type="double">
+                <Documentation>TotalBytes</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="UnknownProtocolPkts" type="double">
+                <Documentation>UnknownProtocolPkts</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="ActiveBridges" type="double">
+                <Documentation>ActiveBridges</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="StationsAuthenSncReStrtd" type="double">
+                <Documentation>StationsAuthenSncReStrtd</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="StationsDeAuthenSncReStrtd" type="double">
+                <Documentation>StationsDeAuthenSncReStrtd</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="TotalFramesDiscarded" type="double">
+                <Documentation>TotalFramesDiscarded</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="DiscardsIn" type="double">
+                <Documentation>DiscardsIn</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="FramesIn" type="double">
+                <Documentation>Number of frames (packets) received.</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <Rate>true</Rate>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Packets/s</Units>
+            </Attribute>
+            <Attribute name="StationsRoamedAwySncReStrtd" type="double">
+                <Documentation>StationsRoamedAwySncReStrtd</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+            <Attribute name="AverageFrameSizeIn" type="double">
+                <Documentation>AverageFrameSizeIn</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>B</Units>
+            </Attribute>
+            <Attribute name="DiscardedFrames" type="double">
+                <Documentation>DiscardedFrames</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Avg</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>count</Units>
+            </Attribute>
+        </AttributeGroup>
+
+        <Expressions>
+            <ExpressionGroup name="DeviceComponent" destCert="{http://im.ca.com/inventory}DeviceComponent">
+                <Expression destAttr="IndexList">Indexes</Expression>
+            </ExpressionGroup>
+            <ExpressionGroup name="Item" destCert="{http://im.ca.com/core}Item">
+                <Expression destAttr="Name">Names</Expression>
+                <Expression destAttr="Description">Descriptions</Expression>
+            </ExpressionGroup>
+        </Expressions>
+
+    </FacetType>
+</DataModel>
+
