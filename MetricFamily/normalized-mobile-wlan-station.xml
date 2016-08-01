@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Copyright (c) 2016 CA.  All rights reserved.
+This software and all information contained therein is confidential and
+proprietary and shall not be duplicated, used, disclosed or disseminated in any
+way except as authorized by the applicable license agreement, without the
+express written permission of CA. All authorized reproductions must be marked
+with this language.
+
+EXCEPT AS SET FORTH IN THE APPLICABLE LICENSE AGREEMENT, TO THE
+EXTENT PERMITTED BY APPLICABLE LAW, CA PROVIDES THIS SOFTWARE
+WITHOUT WARRANTY OF ANY KIND, INCLUDING WITHOUT LIMITATION, ANY
+IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR
+PURPOSE.  IN NO EVENT WILL CA BE LIABLE TO THE END USER OR ANY
+THIRD PARTY FOR ANY LOSS OR DAMAGE, DIRECT OR INDIRECT, FROM THE
+USE OF THIS SOFTWARE, INCLUDING WITHOUT LIMITATION, LOST PROFITS,
+BUSINESS INTERRUPTION, GOODWILL, OR LOST DATA, EVEN IF CA IS
+EXPRESSLY ADVISED OF SUCH LOSS OR DAMAGE.
+-->
+<DataModel namespace="http://im.ca.com/normalizer"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:noNamespaceSchemaLocation="IMDBCertificationFacet.xsd">
+           
+  <FacetType name="NormalizedMobileWLANStationInfo"
+             descriptorClass="com.ca.im.core.datamodel.certs.NormalizedFacetDescriptorImpl">
+    <Documentation>Mobile WLAN Station</Documentation>
+    <FacetOf namespace="http://im.ca.com/core" name="Item" />
+    <DisplayName>Mobile WLAN Station</DisplayName>
+    <Protocol>IMDB</Protocol>
+    <TableName>NRM_MOBILE_WLAN_STATION</TableName>
+    <Normalized>true</Normalized>
+    <ComponentFacets>
+        <Facet>{http://im.ca.com/inventory}MobileWLANStation</Facet>
+    </ComponentFacets>
+    <Attribute name="SourceFacetTypes" type="QName" cached="true" persistent="true" list="true" />
+    <AttributeGroup name="MobileWLANStaGroup" list="true" external="true">
+        <Attribute name="Indexes" type="ObjectID[]"  />
+        <Attribute name="Names" type="String"  />
+        <Attribute name="Descriptions" type="String"  />
+        <Attribute name="RadioChannel" type="double">
+            <Documentation>Radio channel.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>none</Units>
+        </Attribute>
+        <Attribute name="FramesIn" type="double">
+            <Documentation>Received packets.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="BytesIn" type="double">
+            <Documentation>Received bytes.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>B/s</Units>
+        </Attribute>
+        <Attribute name="FramesOut" type="double">
+            <Documentation>Transmitted packets.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="BytesOut" type="double">
+            <Documentation>Transmitted bytes.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>B/s</Units>
+        </Attribute>
+        <Attribute name="TransmittedRetries" type="double">
+            <Documentation>Transmitted retries.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Count/s</Units>
+        </Attribute>
+        <Attribute name="Availability" type="double">
+            <Documentation></Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>pct</Units>
+        </Attribute>
+        <Attribute name="RxErrorPackets" type="double">
+            <Documentation>Received error packets.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="TxSuccessPackets" type="double">
+            <Documentation>Successful transmitted packets.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="TxDropPackets" type="double">
+            <Documentation>Drop transmitted packets.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="RxDropPackets" type="double">
+            <Documentation>Drop received packets.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="TxErrorPackets" type="double">
+            <Documentation>Transmitted error packets.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="SignalStrength" type="double">
+            <Documentation>Signal strength</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>none</Units>
+        </Attribute>
+        <Attribute name="RadioType" type="double">
+            <Documentation>Radio Type</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>none</Units>
+        </Attribute>
+        <Attribute name="ReassociateOnRF" type="double">
+            <Documentation>Reassociate count on B/G RF</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Count/s</Units>
+        </Attribute>
+        <Attribute name="TxRetryBytes" type="double">
+            <Documentation>Transmitted retry bytes</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>B/s</Units>
+        </Attribute>
+        <Attribute name="SignalNoiseRatio" type="double">
+            <Documentation>Station's Signal to Noise Ratio.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>none</Units>
+        </Attribute>
+        <Attribute name="VLANStationID" type="double">
+            <Documentation></Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>none</Units>
+        </Attribute>
+        <Attribute name="DataFrames" type="double">
+            <Documentation>Number of Data Frames (Data Packets) sent and received</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="DataFramesIn" type="double">
+            <Documentation>Number of Data Frames (Data Packets) received</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="DataFramesOut" type="double">
+            <Documentation>Number of Data Frames (Data Packets) sent</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Sum</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>Packets/s</Units>
+        </Attribute>
+        <Attribute name="AvgRSSI" type="double">
+            <Documentation>Average client RSSI.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>count</Units>
+        </Attribute>
+    </AttributeGroup>
+    <Expressions>
+      <ExpressionGroup name="DeviceComponent" 
+                       destCert="{http://im.ca.com/inventory}DeviceComponent">
+        <Expression destAttr="IndexList">Indexes</Expression>
+      </ExpressionGroup>
+      <ExpressionGroup name="Item" destCert="{http://im.ca.com/core}Item">
+        <Expression destAttr="Name">Names</Expression>
+        <Expression destAttr="Description">Descriptions</Expression>
+      </ExpressionGroup>
+    </Expressions>
+  </FacetType>
+</DataModel>

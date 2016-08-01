@@ -654,6 +654,160 @@
 				<Polled>true</Polled>
 				<Units>Count/s</Units>
 			</Attribute>
+        <Attribute name="Availability" type="double">
+            <Documentation>Uptime</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>pct</Units>
+        </Attribute>
+        <Attribute name="PctTimeInMasterState" type="double">
+            <Documentation>Percentage of time was in the Master state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>pct</Units>
+        </Attribute>
+        <Attribute name="PctTimeInStandbyState" type="double">
+            <Documentation>Percentage of time was in the Standby state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>pct</Units>
+        </Attribute>
+        <Attribute name="PctTimeInNoRedundancyState" type="double">
+            <Documentation>Percentage of time was in the Noredundancy state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>pct</Units>
+        </Attribute>
+        <Attribute name="PctTimePeerInConnectedState" type="double">
+            <Documentation>Percentage of time Peer was in the Connected state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>pct</Units>
+        </Attribute>
+        <Attribute name="PctTimePeerInDisconnectedState" type="double">
+            <Documentation>Percentage of time Peer was in the Disconnected state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>pct</Units>
+        </Attribute>
+        <Attribute name="TimeInMasterState" type="double">
+            <Documentation>Number of seconds was in the Master state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>s</Units>
+        </Attribute>
+        <Attribute name="TimeInStandbyState" type="double">
+            <Documentation>Number of seconds was in the Standby state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>s</Units>
+        </Attribute>
+        <Attribute name="TimeInNoRedundancyState" type="double">
+            <Documentation>Number of seconds was in the Noredundancy state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>s</Units>
+        </Attribute>
+        <Attribute name="TimePeerInConnectedState" type="double">
+            <Documentation>Number of seconds Peer was in the Connected state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>s</Units>
+        </Attribute>
+        <Attribute name="TimePeerInDisconnectedState" type="double">
+            <Documentation>Number of seconds Peer was in the Disconnected state.</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>s</Units>
+        </Attribute>
         </AttributeGroup>
 
         <Expressions>

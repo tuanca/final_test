@@ -1731,6 +1731,34 @@
                 <Polled>true</Polled>
                 <Units>count</Units>
             </Attribute>
+            <Attribute name="NumOfAssociatedStations" type="double">
+                <Documentation>Number of Associated Stations</Documentation>
+                <IsDbColumn>true</IsDbColumn>
+                <Baseline>false</Baseline>
+                <RollupExpression></RollupExpression>
+                <Minimum>false</Minimum>
+                <Maximum>false</Maximum>
+                <RollupStrategy>Sum</RollupStrategy>
+                <StandardDeviation>false</StandardDeviation>
+                <Variance>false</Variance>
+                <Percentile>0</Percentile>
+                <Polled>true</Polled>
+                <Units>Count/s</Units>
+            </Attribute>
+        <Attribute name="SignalStrength" type="double">
+            <Documentation>Signal strength</Documentation>
+              <IsDbColumn>true</IsDbColumn>
+              <Baseline>false</Baseline>
+              <RollupExpression></RollupExpression>
+              <Minimum>false</Minimum>
+              <Maximum>false</Maximum>
+              <RollupStrategy>Avg</RollupStrategy>
+              <StandardDeviation>false</StandardDeviation>
+              <Variance>false</Variance>
+              <Percentile>0</Percentile>
+              <Polled>true</Polled>
+              <Units>none</Units>
+        </Attribute>
         </AttributeGroup>
 
         <Expressions>
